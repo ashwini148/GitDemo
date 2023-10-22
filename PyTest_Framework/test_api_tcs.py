@@ -6,7 +6,7 @@ endpoint = "https://todo.pixegami.io"
 # write tests here
 def test_can_call_endpoint():
     response = requests.get(endpoint)
-    assert response.status_code == 200, "API call failed"
+    assert response.status_code == 200, "API call failed, please check"
 
 
 def test_can_create_task():
