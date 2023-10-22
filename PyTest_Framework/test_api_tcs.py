@@ -40,7 +40,7 @@ def test_can_update():
     # create a task
     payload = new_test_data()
     create_task_response = create_task(payload)
-    assert create_task_response.status_code == 200, "Create API failed"
+    assert create_task_response.status_code == 200, "Create API failed, kindly check"
 
     # update the task
     task_id = create_task_response.json()['task']['task_id']
@@ -51,7 +51,7 @@ def test_can_update():
         "is_done": True
     }
     update_task_response = put_task(new_payload)
-    assert update_task_response.status_code==200, "update API failed"
+    assert update_task_response.status_code==200, "update API failed, kindly check"
 
     # get and validate the task
     get_task_response = get_task(task_id)
